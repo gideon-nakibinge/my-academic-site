@@ -1,5 +1,5 @@
 title: "My Academic Site"
-baseurl: ""           # repository root
+baseurl: "/my-academic-site"           # repository root
 markdown: kramdown
 
 nav_items:

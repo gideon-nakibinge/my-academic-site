@@ -1,3 +1,4 @@
+/* ---------- Base styles ---------- */
 :root {
   font-family: system-ui, serif;
   line-height: 1.55;
@@ -10,9 +11,14 @@ body {
   background: #fff;
 }
 
+/* ---------- Header & navigation ---------- */
 .site-header {
-  background: #f9f9f9;
-  border-bottom: 1px solid #eee;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;        /* sticks to top as you scroll */
+  top: 0;
+  z-index: 100;
+  font-weight: 500;
 }
 
 .site-nav {
@@ -29,7 +35,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.6rem;             /* a little extra breathing-room */
 }
 
 .site-nav li a {
@@ -39,7 +45,7 @@ body {
 
 .site-nav li.active a {
   color: var(--accent);
-  font-weight: bold;
+  border-bottom: 2px solid var(--accent);
 }
 
 .menu-toggle {
@@ -51,22 +57,47 @@ body {
   cursor: pointer;
 }
 
+/* ---------- Mobile nav ---------- */
 @media (max-width: 600px) {
   .menu-toggle { display: block; }
-  .site-nav ul { 
+
+  .site-nav ul {           /* collapsed by default */
     flex-direction: column;
     display: none;
     width: 100%;
   }
-  .site-nav.open ul { display: flex; }
+
+  .site-nav.open ul {      /* toggled via JS » open state */
+    display: flex;
+  }
 }
 
+/* ---------- Main content ---------- */
 .site-content {
-  max-width: 820px;
+  max-width: 760px;        /* narrower column for readability */
   margin: 2rem auto;
   padding: 0 1rem;
+  line-height: 1.7;
 }
 
+h1 + p {                   /* first paragraph under an H1 */
+  margin-top: -.5rem;
+  font-size: 1.25rem;
+}
+
+/* ---------- Quick links list (home page) ---------- */
+ul.quick-links {
+  list-style: none;        /* remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+ul.quick-links li {
+  line-height: 1.6;
+  margin-bottom: .4rem;
+}
+
+/* ---------- Footer ---------- */
 .site-footer {
   background: #f9f9f9;
   border-top: 1px solid #eee;
@@ -74,3 +105,6 @@ body {
   font-size: 0.9rem;
   text-align: center;
 }
+
+/* ---------- Nice-to-have ---------- */
+html { scroll-behavior: smooth; }   /* smooth anchor scrolling */

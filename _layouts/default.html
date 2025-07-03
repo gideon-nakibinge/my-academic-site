@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" id="site-nav">
+        <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.getElementById('site-nav').classList.toggle('open')">
+          ☰
+        </button>
+        <ul>
+          {% for item in site.nav_items %}
+            <li{% if page.url == item.url %} class="active"{% endif %}>
+              <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <address>
+        Your Department · Your University – Your City<br>
+        Email: <a href="mailto:you@example.com">you@example.com</a>
+      </address>
+    </footer>
+  </body>
+</html>

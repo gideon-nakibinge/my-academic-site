@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title | default: site.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="site-nav" id="site-nav">
-        <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.getElementById('site-nav').classList.toggle('open')">
-          ☰
-        </button>
-        <ul>
-          {% for item in site.nav_items %}
-            <li{% if page.url == item.url %} class="active"{% endif %}>
-              <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
 
-    <main class="site-content">
-      {{ content }}
-    </main>
+  <!-- ───── Sticky top nav bar ───── -->
+  <header class="site-header">
+    <nav class="site-nav" id="site-nav">
+      <!-- (mobile toggle reserved for future use)
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        ☰
+      </button> -->
+      <ul>
+        {% for item in site.nav_items %}
+          <li{% if page.url == item.url %} class="active"{% endif %}>
+            <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
 
-    <footer class="site-footer">
-      <address>
-        Your Department · Your University – Your City<br>
-        Email: <a href="mailto:you@example.com">you@example.com</a>
-      </address>
-    </footer>
-  </body>
+  <!-- ───── Main grid (content + sidebar) ───── -->
+  <main class="site-content">
+    {{ content }}
+  </main>
+
+  <!-- ───── Fixed bottom nav bar ───── -->
+  <nav class="page-footer-nav">
+    {% for item in site.nav_items %}
+      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+    {% endfor %}
+  </nav>
+
+  <!-- ───── Floating action buttons ───── -->
+  <div class="fab-stack">
+    <a href="{{ '/' | relative_url }}" aria-label="Home">🏠</a>
+    <a href="#audio"             aria-label="Podcast">🎙️</a>
+    <a href="{{ '/faq/' | relative_url }}" aria-label="FAQ">❓</a>
+  </div>
+
+</body>
 </html>

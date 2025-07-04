@@ -1,210 +1,196 @@
 /* ─────────────────────────────────────────────────────────
-   Final consolidated CSS — wider layout, balanced spacing,
-   Bainomugisha-style header and perfectly-aligned sidebar
+   FINAL CONSOLIDATED CSS  
+   – wider layout
+   – centred menu bar
+   – sidebar “Welcome” perfectly aligned
+   – Bainomugisha-style fonts & colours
    ───────────────────────────────────────────────────────── */
 
 /* 1. Base tokens */
-:root {
+:root{
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   line-height: 1.6;
-  --accent: #0366d6;
-  --dark:   #2f353b;
-  --card-bg:#fafafa;
-  --border: #e5e5e5;
+  --accent:  #0366d6;
+  --dark:    #2f353b;
+  --card-bg: #fafafa;
+  --border:  #e5e5e5;
 }
 
-/* 2. Global settings */
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  color: #111;
-  background: #fff;
-  font-size: 15.5px;
-  font-weight: 400;
+/* 2. Global */
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  color:#111;
+  background:#fff;
+  font:400 15.5px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,
+       "Helvetica Neue",Arial,"Noto Sans",sans-serif;
 }
 
 /* 3. Header & nav */
-.site-header {
-  background: var(--dark);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.site-header{
+  background:var(--dark);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  position:sticky;top:0;z-index:100;
 }
-.site-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  margin: 0;
-  padding: 0.8rem 1.2rem;
+.site-nav{
+  display:flex;
+  justify-content:center;           /* centre flex children */
+  align-items:center;
+  width:100%;                       /* take full bar width  */
+  padding:.8rem 1.2rem;
 }
-.site-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2.2rem;
+.site-nav ul{
+  list-style:none;
+  margin:0 auto;                    /* UL itself centred    */
+  padding:0;
+  display:flex;
+  gap:2.2rem;
 }
 .site-nav a,
 .site-nav a:visited,
 .site-nav a:hover,
 .site-nav a:focus,
-.site-nav li.active a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.05rem;        /* ≈16.8 px */
-  font-weight: 600;
-  letter-spacing: 0.02em;
+.site-nav li.active a{
+  color:#fff;
+  text-decoration:none;
+  font-size:1.05rem;                /* ≈16.8 px */
+  font-weight:600;
+  letter-spacing:.02em;
 }
-.site-nav li.active a { border-bottom: 2px solid #fff; }
+.site-nav li.active a{border-bottom:2px solid #fff;}
 .site-nav a:hover,
-.site-nav a:focus { opacity: 0.85; }
+.site-nav a:focus{opacity:.85;}
 
-/* 4. Main grid + explicit column placement */
-.site-content {
-  display: grid;
-  grid-template-columns: 1fr 260px;      /* main | sidebar */
-  gap: 2.5rem;
-  max-width: 72rem;                      /* 1152 px — matches reference */
-  margin: 2rem auto 5rem;
-  padding: 0 0.5rem;                     /* slimmer side-pads */
+/* 4. Main grid */
+.site-content{
+  display:grid;
+  grid-template-columns:1fr 260px;  /* main | sidebar */
+  gap:2.5rem;
+  max-width:72rem;                  /* 1152 px cap */
+  margin:2rem auto 5rem;
+  padding:0 .5rem;                  /* slimmer side pads */
 }
-@media (max-width: 920px) { .site-content { display: block; } }
-@media (min-width: 921px)  { .site-content { gap: 3rem; } }
-@media (min-width: 1100px) { .site-content { grid-template-columns: 1fr 300px; } }
+@media(max-width:920px){ .site-content{display:block;} }
+@media(min-width:921px){  .site-content{gap:3rem;} }
+@media(min-width:1100px){ .site-content{grid-template-columns:1fr 300px;} }
 
-/* Align sidebar photo just below the H1 on desktop */
-@media (min-width: 921px){
-  .site-content > .card{ margin-top: 1rem; }
+/* align sidebar card under audio heading on desktop */
+@media(min-width:921px){
+  .site-content > .card{ margin-top:3rem; }
 }
 
-/* Explicit placement */
-.site-content > .main { grid-column: 1; }
-.site-content > .card { grid-column: 2; grid-row: 1 / span 20; }
+/* explicit placement */
+.site-content>.main{grid-column:1;}
+.site-content>.card{grid-column:2;grid-row:1/span 20;}
 
-/* 5. Main column type & rhythm */
-.main h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin: 0 0 1.4rem;
+/* 5. Main column rhythm */
+.main h1{
+  font-size:2.4rem;
+  font-weight:700;
+  margin:0 0 1.4rem;
 }
-.main hr {
-  border: none;
-  border-top: 1px solid #e1e4e8;
-  margin: 1.6rem 0;
+.main hr{
+  border:none;border-top:1px solid #e1e4e8;
+  margin:1.6rem 0;
 }
-.main h2 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin: 2.1rem 0 0.7rem;
+.main h2{
+  font-size:1.35rem;
+  font-weight:700;
+  margin:2.1rem 0 .7rem;
 }
-.main p  { margin: 0.9rem 0; }
-.main ul { margin: 1.2rem 0 1rem; padding-left: 1.45rem; }
-.main li { margin: 0.35rem 0; }
-.main strong { font-weight: 700; }
-.main blockquote {
-  border-left: 4px solid #ccc;
-  margin: 1.8rem 0;
-  padding: 0.5rem 1.2rem;
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.45;
-  background: var(--card-bg);
+.main p{margin:.9rem 0;}
+.main ul{margin:1.2rem 0 1rem;padding-left:1.45rem;}
+.main li{margin:.35rem 0;}
+.main strong{font-weight:700;}
+.main blockquote{
+  border-left:4px solid #ccc;
+  margin:1.8rem 0;
+  padding:.5rem 1.2rem;
+  font-size:1.15rem;
+  font-weight:600;
+  line-height:1.45;
+  background:var(--card-bg);
 }
-audio { margin-bottom: 0.9rem; }
+audio{margin-bottom:.9rem;}
 
-/* 6. Pink tag badges */
-.tag {
-  display: inline-block;
-  margin: 2.05rem 0 0.85rem;
-  background: #ffeef0;
-  border: 1px solid #d73a49;
-  color: #cb2431;
-  border-radius: 4px;
-  padding: 0.12rem 0.40rem;
-  font-size: 0.85rem;
-  font-family:
-    SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+/* 6. Tag badge */
+.tag{
+  display:inline-block;
+  margin:2.05rem 0 .85rem;
+  background:#ffeef0;
+  border:1px solid #d73a49;
+  color:#cb2431;
+  border-radius:4px;
+  padding:.12rem .4rem;
+  font:.85rem SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
 }
 
 /* 7. Quick-links */
-ul.quick-links {
-  list-style: none;
-  margin: 2rem 0 0;
-  padding: 0;
+ul.quick-links{
+  list-style:none;
+  margin:2rem 0 0;padding:0;
 }
-ul.quick-links li { margin: 0.3rem 0; }
+ul.quick-links li{margin:.3rem 0;}
 
 /* 8. Sidebar card */
-.card {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--card-bg);
-  font-size: 0.9rem;
+.card{
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--card-bg);
+  font-size:.9rem;
 }
-.card header {
-  background: #f4f4f4;
-  padding: 0.6rem 1rem;
-  font-weight: 700;
+.card header{
+  background:#f4f4f4;
+  padding:.6rem 1rem;
+  font-weight:700;
 }
-.card .card-body { padding: 1rem; }
+.card .card-body{padding:1rem;}
 .card img,
-.portrait {
-  width: 100%;
-  max-height: 255px;      /* lock card height */
-  object-fit: cover;
+.portrait{
+  width:100%;
+  max-height:255px;
+  object-fit:cover;
 }
 
-/* 9. Floating action buttons */
-.fab-stack {
-  position: fixed;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  z-index: 200;
+/* 9. FABs */
+.fab-stack{
+  position:fixed;right:1rem;top:50%;
+  transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:.9rem;
+  z-index:200;
 }
-.fab-stack a {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #d0d0d0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  font-size: 1.35rem;
-  text-decoration: none;
+.fab-stack a{
+  display:grid;place-items:center;
+  width:48px;height:48px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid #d0d0d0;
+  box-shadow:0 1px 3px rgba(0,0,0,.12);
+  font-size:1.35rem;
+  text-decoration:none;
 }
-.fab-stack a:hover { background: #f5f5f5; }
+.fab-stack a:hover{background:#f5f5f5;}
 
 /* 10. Bottom nav */
-.page-footer-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #f6f7f8;
-  border-top: 1px solid var(--border);
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 0.35rem 0;
+.page-footer-nav{
+  position:fixed;bottom:0;left:0;width:100%;
+  background:#f6f7f8;
+  border-top:1px solid var(--border);
+  font-size:.9rem;text-align:center;
+  padding:.35rem 0;
 }
-.page-footer-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  padding: 0 0.25rem;
+.page-footer-nav a{
+  color:var(--accent);
+  text-decoration:none;
+  padding:0 .25rem;
 }
-.page-footer-nav a:not(:last-child)::after {
-  content: "|";
-  margin-left: 0.25rem;
-  color: #999;
+.page-footer-nav a:not(:last-child)::after{
+  content:"|";
+  margin-left:.25rem;
+  color:#999;
 }
 
-/* Hide legacy footer */
-.site-footer { display: none; }
+/* hide legacy footer */
+.site-footer{display:none;}

@@ -1,14 +1,14 @@
 /* ─────────────────────────────────────────────────────────
-   FINAL CONSOLIDATED CSS  – 2025-07-04
-   • Top & bottom nav left-aligned
-   • Sidebar cards kept separate (gap + full borders)
-   • Bainomugisha-style layout and typography
+   CSS — matches Engineer Bainomugisha’s layout
+   • top & bottom nav left-aligned
+   • sidebar keeps two separate cards, each with its own border
+   • same grid, spacing, and type scale
    ───────────────────────────────────────────────────────── */
 
 /* 1. Base tokens */
 :root{
   font-family:
-    -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,
+    -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
     "Helvetica Neue",Arial,"Noto Sans",sans-serif;
   line-height:1.6;
   --accent:#0366d6;
@@ -27,7 +27,7 @@ body{
        "Helvetica Neue",Arial,"Noto Sans",sans-serif;
 }
 
-/* 3. Header & top nav */
+/* 3. Header & top nav (left-aligned) */
 .site-header{
   background:var(--dark);
   border-bottom:1px solid rgba(255,255,255,.06);
@@ -35,7 +35,7 @@ body{
 }
 .site-nav{
   display:flex;
-  justify-content:flex-start;          /* left-aligned           */
+  justify-content:flex-start;          /* left-align links  */
   align-items:center;
   width:100%;
   padding:.8rem 1.2rem;
@@ -50,24 +50,25 @@ body{
 .site-nav a,
 .site-nav a:visited,
 .site-nav a:hover,
-.site-nav a:focus,
-.site-nav li.active a{
+.site-nav a:focus{
   color:#fff;
   text-decoration:none;
-  font-size:1.05rem;                   /* ≈16.8 px               */
-  font-weight:600;
+  font:600 1.05rem/1.2 inherit;        /* ≈16.8 px, semi-bold */
   letter-spacing:.02em;
 }
-.site-nav li.active a{border-bottom:2px solid #fff;}
+.site-nav li.active a{
+  color:#fff;
+  border-bottom:2px solid #fff;
+}
 .site-nav a:hover,
 .site-nav a:focus{opacity:.85;}
 
-/* 4. Main grid */
+/* 4. Grid layout */
 .site-content{
   display:grid;
-  grid-template-columns:1fr 260px;     /* main | sidebar         */
+  grid-template-columns:1fr 260px;     /* main | sidebar    */
   gap:2.5rem;
-  max-width:72rem;                     /* 1152 px cap            */
+  max-width:72rem;                     /* 1152 px cap       */
   margin:2rem auto 5rem;
   padding:0 .5rem;
 }
@@ -75,13 +76,13 @@ body{
 @media(min-width:921px){ .site-content{gap:3rem;} }
 @media(min-width:1100px){.site-content{grid-template-columns:1fr 300px;}}
 
-/* Sidebar placement + gap between cards */
+/* sidebar alignment & separation */
 @media(min-width:921px){
-  .site-content>.card:first-child{margin-top:1.6rem;}  /* align with audio */
-  .site-content>.card + .card {margin-top:2rem;}       /* keep cards apart */
+  .site-content>.card:first-child{margin-top:1.6rem;}  /* aligns with audio */
+  .site-content>.card + .card   {margin-top:2rem;}     /* keep cards apart  */
 }
 
-/* Explicit placement */
+/* explicit placement */
 .site-content>.main {grid-column:1;}
 .site-content>.card {grid-column:2;grid-row:1/span 20;}
 
@@ -127,14 +128,14 @@ audio{margin-bottom:.9rem;}
   font:.85rem SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
 }
 
-/* 7. Quick-links */
+/* 7. Quick-links list */
 ul.quick-links{
   list-style:none;
   margin:2rem 0 0;padding:0;
 }
 ul.quick-links li{margin:.3rem 0;}
 
-/* 8. Sidebar card */
+/* 8. Sidebar cards (two distinct boxes) */
 .card{
   border:1px solid var(--border);
   border-radius:8px;
@@ -154,7 +155,7 @@ ul.quick-links li{margin:.3rem 0;}
   object-fit:cover;
 }
 
-/* 9. Floating action buttons */
+/* 9. Floating-action buttons */
 .fab-stack{
   position:fixed;right:1rem;top:50%;
   transform:translateY(-50%);
@@ -193,5 +194,5 @@ ul.quick-links li{margin:.3rem 0;}
   color:#999;
 }
 
-/* Hide legacy footer */
+/* hide legacy footer */
 .site-footer{display:none;}

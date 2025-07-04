@@ -24,7 +24,7 @@ Currently, I lead several research initiatives aimed at creating and applying co
   <header>Welcome</header>
   <div class="card-body">
     <!-- Replace with your real portrait (e.g. assets/images/portrait.jpg) -->
-    <img src="{{ '/assets/images/portrait.jpg' | relative_url }}"
+    <img src="{{ '/assets/images/gideon.jpg' | relative_url }}"
          alt="Portrait of Engineer Sample Surname"
          style="width:100%;border-radius:4px">
   </div>

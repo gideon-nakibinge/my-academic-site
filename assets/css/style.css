@@ -48,11 +48,11 @@ body {
 }
 .site-nav a {
   text-decoration: none;
-  colour: #c7cdd1;
+  colour: #fff;
   font-weight: 600;
 }
 .site-nav li.active a {
-  colour: #fff;
+  colour: #ffffff;
   border-bottom: 2px solid #fff;
 }
 

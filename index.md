@@ -11,8 +11,6 @@ permalink: /
 
 ## Listen to the site! {#audio}
 
-{% include audio-player.html %}
-
 [Download Podcast]({{ '/assets/audio/site-intro.mp3' | relative_url }})
 
 I am a Professor of Computer Science and the Chair of the Department of Computer Science at Makerere University. My research is focused on leveraging Computer Science to develop novel solutions to global challenges. I am also passionate about advancing high-quality Computer Science education — that is of sufficient breadth and depth, practical and fast enough, and responsive to the fast-evolving demands of the field.
@@ -54,7 +52,7 @@ I have had the privilege of leading teams of talented individuals dedicated to a
   <header>Contact me</header>
   <div class="card-body">
     <img
-      src="{{ '/assets/images/bainomugisha.jpg' | relative_url }}"
+      src="{{ '/assets/images/gideon.jpg' | relative_url }}"
       alt="Portrait of Engineer Bainomugisha"
       class="portrait">
     <p>

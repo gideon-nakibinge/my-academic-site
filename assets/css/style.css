@@ -1,14 +1,14 @@
 /* ─────────────────────────────────────────────────────────
-   STYLE SHEET – Gideon Nakibinge site (compact version)
-   Mirrors ibaino.net layout, but with smaller fonts and
-   tighter vertical rhythm.  Updated 2025-07-04.
+   STYLE SHEET – Gideon Nakibinge site  (compact, Arial-Light)
+   Mirrors ibaino.net layout, but uses Arial Light (300) for
+   body copy and keeps headings bold.  2025-07-04
    ───────────────────────────────────────────────────────── */
 
 /* 1 Base tokens */
 :root{
+  /* All text defaults to Arial Light → Arial → Helvetica */
   font-family:
-    -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
-    "Helvetica Neue",Arial,"Noto Sans",sans-serif;
+    "Arial Light", "Arial", "Helvetica Neue", Helvetica, sans-serif;
   line-height:1.45;                       /* tighter default */
   --accent:#0366d6;
   --dark:#2f353b;
@@ -16,14 +16,14 @@
   --border:#e5e5e5;
 }
 
-/* 2 Global text size & colour */
+/* 2 Global size & weight */
 html{scroll-behavior:smooth;}
 body{
   margin:0;
   color:#111;
   background:#fff;
-  font:400 14.2px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,
-       "Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  font-weight:300;                                      /* light weight */
+  font-size:14.2px;                                     /* compact size */
 }
 
 /* 3 Header & top nav (left-aligned) */
@@ -50,30 +50,28 @@ body{
 .site-nav a:focus{
   color:#fff;
   text-decoration:none;
-  font:600 0.95rem/1.2 inherit;           /* scaled with body size */
+  font:600 0.95rem/1.2 "Arial", "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing:.02em;
 }
-.site-nav li.active a{
-  border-bottom:2px solid #fff;
-}
+.site-nav li.active a{border-bottom:2px solid #fff;}
 .site-nav a:hover,
 .site-nav a:focus{opacity:.85;}
 
 /* 4 Main grid */
 .site-content{
   display:grid;
-  grid-template-columns:1fr 260px;        /* main | sidebar */
-  gap:2rem;                               /* slightly tighter */
-  max-width:72rem;                        /* 1152 px cap */
+  grid-template-columns:1fr 260px;          /* main | sidebar */
+  gap:2rem;
+  max-width:72rem;                          /* 1152 px cap    */
   margin:2rem auto 5rem;
   padding:0 .5rem;
 }
 @media(max-width:920px){.site-content{display:block;}}
 @media(min-width:921px){ .site-content{gap:2.5rem;} }
 
-/* Sidebar placement & spacing */
+/* Sidebar alignment & spacing */
 @media(min-width:921px){
-  .site-content>.card:first-child{margin-top:4.6rem;}  /* align with h-rule */
+  .site-content>.card:first-child{margin-top:4.6rem;}   /* under <hr> */
   .site-content>.card + .card   {margin-top:1.6rem;}
 }
 .site-content>.main {grid-column:1;}
@@ -81,8 +79,7 @@ body{
 
 /* 5 Main column rhythm */
 .main h1{
-  font-size:1.8rem;                      /* was 2rem */
-  font-weight:700;
+  font:700 2rem/1.25 "Arial","Helvetica Neue",Helvetica,sans-serif;
   margin:0 0 1.2rem;
 }
 .main hr{
@@ -90,23 +87,20 @@ body{
   margin:1.3rem 0;
 }
 .main h2{
-  font-size:1.2rem;                      /* was 1.35rem */
-  font-weight:700;
+  font:600 1.2rem/1.3 "Arial","Helvetica Neue",Helvetica,sans-serif;
   margin:1.6rem 0 .6rem;
 }
 .main p,
-.main ul{margin:.6rem 0;}                /* tighter vertical gaps */
+.main ul{margin:.6rem 0;}
 .main li{margin:.25rem 0;}
-.main strong{font-weight:700;}
+.main strong{font-weight:600;}
 
 /* 5a Blockquote */
 .main blockquote{
   border-left:4px solid #ccc;
   margin:1.2rem 0;
   padding:.4rem 1rem;
-  font-size:1.05rem;
-  font-weight:600;
-  line-height:1.4;
+  font:600 1.05rem/1.4 "Arial",sans-serif;
   background:var(--card-bg);
 }
 audio{margin-bottom:.7rem;}
@@ -120,14 +114,12 @@ audio{margin-bottom:.7rem;}
   color:#cb2431;
   border-radius:4px;
   padding:.1rem .35rem;
-  font:.78rem SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  font:500 .78rem/1 "Arial",monospace;
 }
 
-/* 7 Quick-links list */
+/* 7 Quick-links */
 ul.quick-links{
-  list-style:none;
-  margin:1.6rem 0 0;
-  padding:0;
+  list-style:none;margin:1.6rem 0 0;padding:0;
 }
 ul.quick-links li{margin:.25rem 0;}
 
@@ -136,12 +128,12 @@ ul.quick-links li{margin:.25rem 0;}
   border:1px solid var(--border);
   border-radius:8px;
   background:var(--card-bg);
-  font-size:.85rem;
+  font:300 .85rem/1.45 "Arial",sans-serif;
 }
 .card header{
   background:#f4f4f4;
   padding:.55rem .9rem;
-  font-weight:700;
+  font:600 .9rem/1 "Arial",sans-serif;
 }
 .card .card-body{padding:.85rem;}
 .card img,
@@ -175,7 +167,7 @@ ul.quick-links li{margin:.25rem 0;}
   position:fixed;bottom:0;left:0;width:100%;
   background:#f6f7f8;
   border-top:1px solid var(--border);
-  font-size:.8rem;
+  font:300 .8rem/1.4 "Arial",sans-serif;
   text-align:left;
   padding:.3rem .9rem;
 }
@@ -190,7 +182,7 @@ ul.quick-links li{margin:.25rem 0;}
   color:#999;
 }
 
-/* 11 Inline links (download audio / podcast) */
+/* 11 Inline links */
 .main a{
   color:var(--accent);
   text-decoration:none;

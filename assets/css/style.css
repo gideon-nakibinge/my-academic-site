@@ -25,14 +25,17 @@ body{
   border-bottom:1px solid rgba(255,255,255,.06);
   position:sticky;top:0;z-index:100;
 }
+/* ── keep nav items on one line & push them left ── */
 .site-nav{
-  display:flex;align-items:center;
-  max-width:100px;margin:0 auto;padding:.8rem .6rem;gap: 1.6rem;
+  max-width:100%;            /* full-width bar                 */
+  padding:.8rem 1.2rem;      /* slimmer side-padding           */
 }
+
 .site-nav ul{
-  list-style:none;margin:0;padding:0;
-  display:flex;flex-wrap:wrap;gap:2.2rem;
+  flex-wrap:nowrap;          /* DO NOT wrap onto a 2nd line    */
+  gap:2.2rem;                /* space between links (ref size) */
 }
+
 .site-nav a{
   text-decoration:none;
   color:#c7cdd1;

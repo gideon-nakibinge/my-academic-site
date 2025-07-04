@@ -52,7 +52,7 @@ body {
   font-weight: 600;
 }
 .site-nav li.active a {
-  colour: #ffffff;
+  colour: #ffffffe3;
   border-bottom: 2px solid #fff;
 }
 

@@ -1,5 +1,8 @@
 /* ─────────────────────────────────────────────────────────
-   FINAL CONSOLIDATED CSS
+   FINAL CONSOLIDATED CSS  – 2025-07-04
+   • Top & bottom nav left-aligned
+   • Sidebar cards kept separate (gap + full borders)
+   • Bainomugisha-style layout and typography
    ───────────────────────────────────────────────────────── */
 
 /* 1. Base tokens */
@@ -24,7 +27,7 @@ body{
        "Helvetica Neue",Arial,"Noto Sans",sans-serif;
 }
 
-/* 3. Header & nav */
+/* 3. Header & top nav */
 .site-header{
   background:var(--dark);
   border-bottom:1px solid rgba(255,255,255,.06);
@@ -32,14 +35,14 @@ body{
 }
 .site-nav{
   display:flex;
-  justify-content:flex-start;      /* << LEFT-aligned now */
+  justify-content:flex-start;          /* left-aligned           */
   align-items:center;
-  width:100%;                      /* full-width bar      */
+  width:100%;
   padding:.8rem 1.2rem;
 }
 .site-nav ul{
   list-style:none;
-  margin:0;                        /* no auto-centering   */
+  margin:0;
   padding:0;
   display:flex;
   gap:2.2rem;
@@ -51,7 +54,7 @@ body{
 .site-nav li.active a{
   color:#fff;
   text-decoration:none;
-  font-size:1.05rem;               /* ≈16.8 px            */
+  font-size:1.05rem;                   /* ≈16.8 px               */
   font-weight:600;
   letter-spacing:.02em;
 }
@@ -62,9 +65,9 @@ body{
 /* 4. Main grid */
 .site-content{
   display:grid;
-  grid-template-columns:1fr 260px; /* main | sidebar      */
+  grid-template-columns:1fr 260px;     /* main | sidebar         */
   gap:2.5rem;
-  max-width:72rem;                /* 1152 px cap         */
+  max-width:72rem;                     /* 1152 px cap            */
   margin:2rem auto 5rem;
   padding:0 .5rem;
 }
@@ -72,27 +75,15 @@ body{
 @media(min-width:921px){ .site-content{gap:3rem;} }
 @media(min-width:1100px){.site-content{grid-template-columns:1fr 300px;}}
 
-/* Align first sidebar card just under "Listen to the site!" */
+/* Sidebar placement + gap between cards */
 @media(min-width:921px){
-  .site-content>.card:first-child{margin-top:1.6rem;}
-}
-
-/* Join stacked cards into one visual block */
-.card + .card{
-  margin-top:0;                 /* remove the gap        */
-  border-top:none;              /* no double border      */
-  border-top-left-radius:0;
-  border-top-right-radius:0;
-}
-.card:not(:last-child){
-  border-bottom:none;           /* seamless join         */
-  border-bottom-left-radius:0;
-  border-bottom-right-radius:0;
+  .site-content>.card:first-child{margin-top:1.6rem;}  /* align with audio */
+  .site-content>.card + .card {margin-top:2rem;}       /* keep cards apart */
 }
 
 /* Explicit placement */
-.site-content>.main{grid-column:1;}
-.site-content>.card{grid-column:2;grid-row:1/span 20;}
+.site-content>.main {grid-column:1;}
+.site-content>.card {grid-column:2;grid-row:1/span 20;}
 
 /* 5. Main column rhythm */
 .main h1{
@@ -182,14 +173,14 @@ ul.quick-links li{margin:.3rem 0;}
 }
 .fab-stack a:hover{background:#f5f5f5;}
 
-/* 10. Bottom nav */
+/* 10. Bottom nav (left-aligned) */
 .page-footer-nav{
   position:fixed;bottom:0;left:0;width:100%;
   background:#f6f7f8;
   border-top:1px solid var(--border);
   font-size:.9rem;
-  text-align:center;
-  padding:.35rem 0;
+  text-align:left;
+  padding:.35rem 1rem;
 }
 .page-footer-nav a{
   color:var(--accent);

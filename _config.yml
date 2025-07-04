@@ -15,12 +15,21 @@ markdown: kramdown           # default Markdown engine
 
 # Left-to-right navigation bar items
 nav_items:
-  - name: Home        ; url: /
-  - name: Research    ; url: /research/
-  - name: Publications; url: /publications/
-  - name: Talks       ; url: /talks/
-  - name: Teaching    ; url: /teaching/
-  - name: Blog        ; url: /blog/
-  - name: CV          ; url: /cv/
-  - name: Misc        ; url: /misc/
-  - name: FAQ         ; url: /faq/
+  - name: Home
+    url: /
+  - name: Research
+    url: /research/
+  - name: Publications
+    url: /publications/
+  - name: Talks
+    url: /talks/
+  - name: Teaching
+    url: /teaching/
+  - name: Blog
+    url: /blog/
+  - name: CV
+    url: /cv/
+  - name: Misc
+    url: /misc/
+  - name: FAQ
+    url: /faq/

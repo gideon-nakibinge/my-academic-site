@@ -92,3 +92,18 @@ ul.quick-links li{margin:.3rem 0}
   max-height: 280px;       /* same visual height as ibaino.net */
   object-fit: cover;       /* crops if the file is very tall    */
 }
+
+/* --- red “tag” badge like ibaino.net --- */
+.tag{
+  display:inline-block;
+  background:#ffeef0;
+  border:1px solid #d73a49;
+  color:#cb2431;
+  border-radius:4px;
+  padding:.15rem .45rem;
+  font-size:.9rem;
+  font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+}
+
+/* little spacing before each tag */
+.main .tag{margin-top:2.2rem;display:inline-block}

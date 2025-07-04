@@ -5,7 +5,7 @@ permalink: /
 
 <div class="main" markdown="1">
 
-# Engineer Bainomugisha
+# Gideon Nakibinge
 
 ---
 
@@ -53,7 +53,7 @@ I have had the privilege of leading teams of talented individuals dedicated to a
   <div class="card-body">
     <img
       src="{{ '/assets/images/gideon.jpg' | relative_url }}"
-      alt="Portrait of Engineer Bainomugisha"
+      alt="Portrait of Gideon Nakibinge"
       class="portrait">
     <p>
       Department of Computer Science<br>

@@ -1,5 +1,6 @@
 /* ─────────────────────────────────────────────────────────
-   CSS – Gideon replica of ibaino.net (2025-07-04 update)
+   STYLE SHEET  –  Gideon Nakibinge site clone of ibaino.net
+   (updated 2025-07-04)
    ───────────────────────────────────────────────────────── */
 
 /* 1 Base tokens */
@@ -32,7 +33,7 @@ body{
 }
 .site-nav{
   display:flex;
-  justify-content:flex-start;
+  justify-content:flex-start;          /* links flush left      */
   align-items:center;
   width:100%;
   padding:.8rem 1.2rem;
@@ -48,7 +49,7 @@ body{
 .site-nav a:focus{
   color:#fff;
   text-decoration:none;
-  font:600 1.05rem/1.2 inherit;
+  font:600 1.05rem/1.2 inherit;        /* ≈ 16.8 px             */
   letter-spacing:.02em;
 }
 .site-nav li.active a{
@@ -61,28 +62,35 @@ body{
 /* 4 Main grid */
 .site-content{
   display:grid;
-  grid-template-columns:1fr 260px;    /* main | sidebar */
+  grid-template-columns:1fr 260px;     /* main | sidebar (fixed 260 px) */
   gap:2.5rem;
-  max-width:72rem;                   /* 1152 px cap */
+  max-width:72rem;                     /* 1152 px cap              */
   margin:2rem auto 5rem;
   padding:0 .5rem;
 }
-@media(max-width:920px){.site-content{display:block;}}
-@media(min-width:921px){ .site-content{gap:3rem;} }
-
-/* 4a Sidebar alignment & spacing */
+@media(max-width:920px){
+  .site-content{display:block;}
+}
 @media(min-width:921px){
-  .site-content>.card:first-child{margin-top:3rem;}  /* align with audio */
-  .site-content>.card + .card   {margin-top:2rem;}  /* gap between cards */
+  .site-content{gap:3rem;}
 }
 
-/* explicit placement */
+/* 4a Sidebar position & card spacing */
+@media(min-width:921px){
+  /* top of first card aligns with “Listen to the site!” heading */
+  .site-content>.card:first-child{margin-top:5.2rem;}
+
+  /* keep a tidy gap between multiple cards */
+  .site-content>.card + .card{margin-top:2rem;}
+}
+
+/* explicit placement; auto height for each card */
 .site-content>.main {grid-column:1;}
-.site-content>.card {grid-column:2;grid-row:auto;}  /* auto height */
+.site-content>.card {grid-column:2;grid-row:auto;}
 
 /* 5 Main column rhythm */
 .main h1{
-  font-size:2.15rem;                 /* smaller name */
+  font-size:2rem;                      /* same scale as reference */
   font-weight:700;
   margin:0 0 1.4rem;
 }
@@ -125,11 +133,12 @@ audio{margin-bottom:.9rem;}
 /* 7 Quick-links */
 ul.quick-links{
   list-style:none;
-  margin:2rem 0 0;padding:0;
+  margin:2rem 0 0;
+  padding:0;
 }
 ul.quick-links li{margin:.3rem 0;}
 
-/* 8 Sidebar card */
+/* 8 Sidebar cards */
 .card{
   border:1px solid var(--border);
   border-radius:8px;

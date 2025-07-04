@@ -13,7 +13,7 @@ permalink: /
 
 {% include audio-player.html %}
 
-[Download Podcast]({{ '/assets/audio/site-intro.mp3' | relative_url }})
+[Download the podcast]({{ '/assets/audio/site-intro.mp3' | relative_url }})
 
 I am a **Data Scientist** and MSc researcher focused on trustworthy, privacy-preserving analytics for social impact.  
 My work explores how *deep-learning systems* and *statistical modelling* can inform better decisions in health, climate, and finance.
@@ -41,7 +41,7 @@ We are driving five thematic areas:
 
 <span class="tag">Past research projects</span>
 
-**iScheme and Flute programming languages.**  Earlier in my career I created high-level languages that let programmers build adaptive mobile software without worrying about low-level concerns.  
+**iScheme and Flute programming languages.** Earlier in my career I created high-level languages that let programmers build adaptive mobile software without worrying about low-level concerns.  
 **BRIGHT:** Trained 10 PhD and 5 postdocs between Makerere University and Chalmers/Gothenburg, advancing CS expertise in Uganda.  
 **COAST:** Delivered AI systems for pandemic response strategy and surveillance in East Africa during COVID-19.
 
@@ -66,7 +66,6 @@ We are driving five thematic areas:
     </p>
   </div>
 </aside>
-
 
 ## Quick links
 

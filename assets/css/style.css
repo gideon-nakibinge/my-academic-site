@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────
-   STYLE SHEET  –  Gideon Nakibinge site clone of ibaino.net
-   (updated 2025-07-04)
+   STYLE SHEET – Gideon Nakibinge site clone of ibaino.net
+   (2025-07-04 • includes link styling patch)
    ───────────────────────────────────────────────────────── */
 
 /* 1 Base tokens */
@@ -33,7 +33,7 @@ body{
 }
 .site-nav{
   display:flex;
-  justify-content:flex-start;          /* links flush left      */
+  justify-content:flex-start;
   align-items:center;
   width:100%;
   padding:.8rem 1.2rem;
@@ -49,7 +49,7 @@ body{
 .site-nav a:focus{
   color:#fff;
   text-decoration:none;
-  font:600 1.05rem/1.2 inherit;        /* ≈ 16.8 px             */
+  font:600 1.05rem/1.2 inherit;
   letter-spacing:.02em;
 }
 .site-nav li.active a{
@@ -62,35 +62,28 @@ body{
 /* 4 Main grid */
 .site-content{
   display:grid;
-  grid-template-columns:1fr 260px;     /* main | sidebar (fixed 260 px) */
+  grid-template-columns:1fr 260px;     /* main | sidebar */
   gap:2.5rem;
-  max-width:72rem;                     /* 1152 px cap              */
+  max-width:72rem;                     /* 1152 px cap    */
   margin:2rem auto 5rem;
   padding:0 .5rem;
 }
-@media(max-width:920px){
-  .site-content{display:block;}
-}
+@media(max-width:920px){.site-content{display:block;}}
+@media(min-width:921px){ .site-content{gap:3rem;} }
+
+/* Sidebar vertical placement & spacing */
 @media(min-width:921px){
-  .site-content{gap:3rem;}
+  .site-content>.card:first-child{margin-top:5.2rem;} /* aligns with audio */
+  .site-content>.card + .card   {margin-top:2rem;}    /* gap between cards */
 }
 
-/* 4a Sidebar position & card spacing */
-@media(min-width:921px){
-  /* top of first card aligns with “Listen to the site!” heading */
-  .site-content>.card:first-child{margin-top:5.2rem;}
-
-  /* keep a tidy gap between multiple cards */
-  .site-content>.card + .card{margin-top:2rem;}
-}
-
-/* explicit placement; auto height for each card */
+/* Explicit placement */
 .site-content>.main {grid-column:1;}
-.site-content>.card {grid-column:2;grid-row:auto;}
+.site-content>.card {grid-column:2;grid-row:auto;}   /* auto height */
 
 /* 5 Main column rhythm */
 .main h1{
-  font-size:2rem;                      /* same scale as reference */
+  font-size:2rem;                     /* headline size */
   font-weight:700;
   margin:0 0 1.4rem;
 }
@@ -138,7 +131,7 @@ ul.quick-links{
 }
 ul.quick-links li{margin:.3rem 0;}
 
-/* 8 Sidebar cards */
+/* 8 Sidebar card */
 .card{
   border:1px solid var(--border);
   border-radius:8px;
@@ -195,6 +188,16 @@ ul.quick-links li{margin:.3rem 0;}
   content:"|";
   margin-left:.25rem;
   color:#999;
+}
+
+/* 11 Inline links inside .main (download audio/podcast style) */
+.main a{
+  color:var(--accent);
+  text-decoration:none;
+}
+.main a:hover,
+.main a:focus{
+  text-decoration:underline;
 }
 
 /* Hide legacy footer */

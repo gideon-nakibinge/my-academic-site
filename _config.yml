@@ -1,23 +1,26 @@
-title: "My Academic Site"
-baseurl: "/my-academic-site"           # repository root
-markdown: kramdown
+# ───────────────────────────────────────
+# Basic site configuration
+# ───────────────────────────────────────
 
+# The text that appears in the browser tab
+title: "Gideon Nakibinge’s site"
+
+# If you publish from the “my-academic-site” repo under
+# https://<username>.github.io/my-academic-site
+baseurl: "/my-academic-site"
+# If you publish at https://<username>.github.io/ (root),
+# change to: baseurl: ""
+
+markdown: kramdown           # default Markdown engine
+
+# Left-to-right navigation bar items
 nav_items:
-  - name: Home
-    url: /
-  - name: Research
-    url: /research/
-  - name: Publications
-    url: /publications/
-  - name: Talks
-    url: /talks/
-  - name: Teaching
-    url: /teaching/
-  - name: Blog
-    url: /blog/
-  - name: CV
-    url: /cv/
-  - name: Misc
-    url: /misc/
-  - name: FAQ
-    url: /faq/
+  - name: Home        ; url: /
+  - name: Research    ; url: /research/
+  - name: Publications; url: /publications/
+  - name: Talks       ; url: /talks/
+  - name: Teaching    ; url: /teaching/
+  - name: Blog        ; url: /blog/
+  - name: CV          ; url: /cv/
+  - name: Misc        ; url: /misc/
+  - name: FAQ         ; url: /faq/

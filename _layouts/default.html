@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon (32×32 PNG) -->
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -11,10 +17,6 @@
   <!-- ───── Sticky top nav bar ───── -->
   <header class="site-header">
     <nav class="site-nav" id="site-nav">
-      <!-- (mobile toggle reserved for future use)
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        ☰
-      </button> -->
       <ul>
         {% for item in site.nav_items %}
           <li{% if page.url == item.url %} class="active"{% endif %}>
@@ -40,7 +42,7 @@
   <!-- ───── Floating action buttons ───── -->
   <div class="fab-stack">
     <a href="{{ '/' | relative_url }}" aria-label="Home">🏠</a>
-    <a href="#audio"             aria-label="Podcast">🎙️</a>
+    <a href="#audio"               aria-label="Podcast">🎙️</a>
     <a href="{{ '/faq/' | relative_url }}" aria-label="FAQ">❓</a>
   </div>
 

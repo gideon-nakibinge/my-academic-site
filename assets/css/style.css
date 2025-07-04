@@ -1,18 +1,25 @@
-/* ───────────────── Base styles ───────────────── */
+/* ─── Base tokens ─────────────────────────────── */
 :root{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
-              "Helvetica Neue",Arial,"Noto Sans",sans-serif,
-              "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+              "Helvetica Neue",Arial,"Noto Sans",sans-serif;
   line-height:1.6;
   --accent:#0366d6;
   --dark:#2f353b;
   --card-bg:#fafafa;
   --border:#e5e5e5;
 }
-html{scroll-behavior:smooth}
-body{margin:0;color:#111;background:#fff}
 
-/* ────────── Header & top nav ────────── */
+/* ─── Global document settings ─────────────────── */
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:#111;
+  background:#fff;
+  font-size:15.5px;                /* matches reference */
+  font-weight:400;
+}
+
+/* ─── Top nav / header ─────────────────────────── */
 .site-header{
   background:var(--dark);
   border-bottom:1px solid rgba(255,255,255,.06);
@@ -22,154 +29,129 @@ body{margin:0;color:#111;background:#fff}
   display:flex;align-items:center;
   max-width:940px;margin:0 auto;padding:.8rem 1rem;
 }
-.site-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2.2rem}
-.site-nav a{text-decoration:none;color:#c7cdd1;font-weight:600}
-.site-nav li.active a{color:#fff;border-bottom:2px solid #fff}
-.menu-toggle{display:none} /* reserved */
+.site-nav ul{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-wrap:wrap;gap:2.2rem;
+}
+.site-nav a{
+  text-decoration:none;
+  color:#c7cdd1;
+  font-weight:600;
+}
+.site-nav li.active a{
+  color:#fff;border-bottom:2px solid #fff;
+}
 
-/* ────────── Main grid ────────── */
+/* ─── Grid (main + sidebar) ────────────────────── */
 .site-content{
-  display:grid;grid-template-columns:1fr 260px;
-  gap:2.5rem;max-width:940px;margin:2rem auto 5rem;padding:0 1rem;
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:2.5rem;
+  max-width:940px;
+  margin:2rem auto 5rem;
+  padding:0 1rem;
 }
 @media(max-width:920px){.site-content{display:block}}
-h1{font-size:2.6rem;margin:0 0 1rem}
-h2{margin-top:2.2rem;font-size:1.3rem}
-h1+p{margin-top:-.25rem;font-size:1.2rem}
-blockquote{
-  border-left:4px solid #ccc;margin:2.5rem 0;
-  padding:.5rem 1.2rem;font-size:1.25rem;font-weight:600;
-  line-height:1.45;background:var(--card-bg)
+
+/* ─── Main column type & rhythm ────────────────── */
+.main h1{
+  font-size:2.4rem; font-weight:700;
+  margin:0 0 1.4rem;
+}
+.main hr{
+  border:none;border-top:1px solid #e1e4e8;
+  margin:1.6rem 0;
+}
+.main h2{
+  font-size:1.35rem;font-weight:700;
+  margin:2.1rem 0 .7rem;
+}
+.main p{margin:.9rem 0;}
+.main ul{margin:1.2rem 0 1rem;padding-left:1.45rem;}
+.main li{margin:.35rem 0;}
+.main strong{font-weight:700;}
+.main blockquote{
+  border-left:4px solid #ccc;
+  margin:1.8rem 0;
+  padding:.5rem 1.2rem;
+  font-size:1.15rem;
+  font-weight:600;
+  line-height:1.45;
+  background:var(--card-bg);
 }
 
-/* ────────── Quick-links list ────────── */
-ul.quick-links{list-style:none;margin:0;padding:0}
-ul.quick-links li{margin:.3rem 0}
-
-/* ────────── Sidebar card ────────── */
-.card{
-  border:1px solid var(--border);border-radius:8px;overflow:hidden;
-  background:var(--card-bg);font-size:.9rem
-}
-.card header{background:#f4f4f4;padding:.6rem 1rem;font-weight:700}
-.card .card-body{padding:1rem}
-
-/* ────────── Floating action buttons ────────── */
-.fab-stack{
-  position:fixed;right:1rem;top:50%;transform:translateY(-50%);
-  display:flex;flex-direction:column;gap:.9rem;z-index:200
-}
-.fab-stack a{
-  display:grid;place-items:center;width:48px;height:48px;border-radius:50%;
-  background:#fff;border:1px solid #d0d0d0;
-  box-shadow:0 1px 3px rgba(0,0,0,.12);
-  text-decoration:none;font-size:1.4rem;transition:background .15s
-}
-.fab-stack a:hover{background:#f5f5f5}
-
-/* ────────── Fixed bottom nav bar ────────── */
-.page-footer-nav{
-  position:fixed;bottom:0;left:0;width:100%;
-  background:#f6f7f8;border-top:1px solid var(--border);
-  font-size:.9rem;text-align:center;padding:.35rem 0
-}
-.page-footer-nav a{
-  color:var(--accent);text-decoration:none;padding:0 .25rem
-}
-.page-footer-nav a:not(:last-child)::after{
-  content:"|";margin-left:.25rem;color:#999
-}
-
-/* Hide classic footer */
-.site-footer{display:none}
-/* --- home-page grid placement --- */
-.site-content > .main  { grid-column: 1; }
-.site-content > .card  { grid-column: 2; grid-row: 1 / span 10; }
-
-/* --- portrait sizing --- */
-.card img {
-  width: 100%;
-  max-height: 280px;       /* same visual height as ibaino.net */
-  object-fit: cover;       /* crops if the file is very tall    */
-}
-
-/* --- red “tag” badge like ibaino.net --- */
+/* ─── Pink “tag” badge ─────────────────────────── */
 .tag{
   display:inline-block;
+  margin:2.05rem 0 .85rem;
   background:#ffeef0;
   border:1px solid #d73a49;
   color:#cb2431;
   border-radius:4px;
-  padding:.15rem .45rem;
-  font-size:.9rem;
+  padding:.12rem .40rem;
+  font-size:.85rem;
   font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
 }
 
-/* little spacing before each tag */
-.main .tag{margin-top:2.2rem;display:inline-block}
-/* ───────── Fine-tune vertical rhythm ───────── */
+/* ─── Quick-links list ─────────────────────────── */
+ul.quick-links{
+  list-style:none;
+  margin:2rem 0 0;
+  padding:0;
+}
+ul.quick-links li{margin:.3rem 0;}
 
-/* 1. Main column default paragraph spacing */
-.main p{
-  margin: .85rem 0;              /* ref site uses ≈14 px gap */
+/* ─── Sidebar “Contact me” card ────────────────── */
+.card{
+  grid-row:1 / span 20;            /* flush with top */
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--card-bg);
+  font-size:.9rem;
+}
+.card header{
+  background:#f4f4f4;
+  padding:.6rem 1rem;
+  font-weight:700;
+}
+.card .card-body{padding:1rem}
+.card img, .portrait{
+  width:100%;
+  max-height:255px;               /* matches reference height */
+  object-fit:cover;
 }
 
-/* 2. Headings */
-.main h1{margin-bottom:1.75rem}  /* name → grey rule gap   */
-.main h2{margin:2.2rem 0 .8rem}  /* (if you use any <h2>)  */
+/* ─── Floating action buttons ──────────────────── */
+.fab-stack{
+  position:fixed;right:1rem;top:50%;
+  transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:.9rem;
+  z-index:200;
+}
+.fab-stack a{
+  display:grid;place-items:center;
+  width:48px;height:48px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid #d0d0d0;
+  box-shadow:0 1px 3px rgba(0,0,0,.12);
+  text-decoration:none;
+  font-size:1.35rem;
+}
+.fab-stack a:hover{background:#f5f5f5}
 
-/* 3. Grey rule under H1 (---) */
-.main hr, .main > hr{
-  border:none;border-top:1px solid #e1e4e8;
-  margin: 1.75rem 0;
+/* ─── Fixed bottom nav bar ─────────────────────── */
+.page-footer-nav{
+  position:fixed;bottom:0;left:0;width:100%;
+  background:#f6f7f8;border-top:1px solid var(--border);
+  font-size:.9rem;text-align:center;padding:.35rem 0;
+}
+.page-footer-nav a{
+  color:var(--accent);text-decoration:none;padding:0 .25rem;
+}
+.page-footer-nav a:not(:last-child)::after{
+  content:"|";margin-left:.25rem;color:#999;
 }
 
-/* 4. Audio block & subsequent link */
-audio{margin-bottom:1rem}
-.main a[href$=".mp3"]{display:inline-block;margin:0 0 1.6rem}
-
-/* 5. Block-quote spacing */
-.main blockquote{margin:2.0rem 0}
-
-/* 6. Tag badge spacing (already had top-margin, add bottom) */
-.main .tag{margin-top:2.2rem;margin-bottom:.9rem}
-
-/* 7. Bullet lists inside main column */
-.main ul{margin:1.2rem 0;padding-left:1.4rem}
-.main ul li{margin:.4rem 0}
-
-/* 8. Quick-links list pushes a bit further down */
-ul.quick-links{margin-top:2rem}
-/* ─── 2025-07-05 alignment patch ───────────────────────── */
-
-/* 1.  Base text size & weight identical to ibaino.net */
-body        { font-size: 17px; }
-.main p,
-.main li    { font-weight: 400; }   /* normal paragraph weight */
-.main strong{ font-weight: 700; }   /* bold runs */
-
-/* 2.  Headings tighter */
-.main h1    { font-size: 2.4rem; font-weight: 700; margin-bottom: 1.6rem; }
-.main h2    { font-size: 1.35rem; font-weight: 700; }
-
-/* 3.  Paragraph & list rhythm */
-.main p     { margin: .95rem 0; }
-.main ul    { margin: 1.4rem 0 1.2rem; padding-left: 1.6rem; }
-.main li    { margin: .45rem 0; }
-
-/* 4.  Grey rule under H1 */
-.main > hr  { border: none; border-top: 1px solid #e1e4e8; margin: 1.6rem 0; }
-
-/* 5.  Tag badge spacing */
-.main .tag  { margin-top: 2.05rem; margin-bottom: .85rem; }
-
-/* 6.  Portrait sizing & card width */
-.portrait   { width: 100%; max-height: 270px; object-fit: cover; }
-.card       { width: 260px; }                 /* locks sidebar width */
-
-/* 7.  Put Contact card flush with top of sidebar */
-.site-content > .card { grid-row: 1 / span 20; }
-
-/* 8.  Ensure audio player & link spacing */
-audio       { margin-bottom: 1rem; }
-.main a[href$=".mp3"] { display: inline-block; margin: 0 0 1.8rem; }
+/* legacy footer hidden */
+.site-footer{display:none}

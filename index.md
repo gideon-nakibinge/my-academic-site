@@ -3,7 +3,9 @@ title: Home
 permalink: /
 ---
 
-# Engineer Sample Surname
+<div class="main">
+
+# Engineer Gideon Nakibinge
 
 ---
 
@@ -13,22 +15,22 @@ permalink: /
 
 [Download Podcast]({{ '/assets/audio/site-intro.mp3' | relative_url }})
 
-I am a **Professor of Computer Science** and the Chair of the Department of Computer Science at **Example University**.  
-My research concerns scalable decision-support systems for climate resilience, and I am passionate about widening access to high-quality CS education.
+I am a **Data Scientist** and an MSc researcher focused on trustworthy, privacy-preserving analytics for social impact. My work explores how *deep-learning systems* and *statistical modelling* can inform better decisions in health, climate, and finance.
 
-> **I believe in the transformative power of computational technology and intelligence to tackle complex societal challenges and improve people's lives.**
+> **I believe computational intelligence, guided by ethics, can transform society for the better.**
 
-Currently, I lead several research initiatives aimed at creating and applying computational methods and tools that can significantly improve quality of life, particularly in low-resource contexts. Through these efforts I strive to bridge the gap between cutting-edge research and real-world impact.
+Right now I lead projects on **climate-risk dashboards**, **fraud detection with differential privacy**, and **AI-assisted learning tools** for low-connectivity schools.
 
-<div class="card">
+</div>
+
+<aside class="card">
   <header>Welcome</header>
   <div class="card-body">
-    <!-- Replace with your real portrait (e.g. assets/images/portrait.jpg) -->
     <img src="{{ '/assets/images/gideon.jpg' | relative_url }}"
-         alt="Portrait of Engineer Sample Surname"
+         alt="Portrait of Gideon"
          style="width:100%;border-radius:4px">
   </div>
-</div>
+</aside>
 
 ## Quick links
 

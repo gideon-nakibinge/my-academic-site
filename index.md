@@ -13,8 +13,6 @@ permalink: /
 
 {% include audio-player.html %}
 
-[Download Podcast]({{ '/assets/audio/site-intro.mp3' | relative_url }})
-
 I am a Professor of Computer Science and the Chair of the Department of Computer Science at Makerere University. My research is focused on leveraging Computer Science to develop novel solutions to global challenges. I am also passionate about advancing high-quality Computer Science education — that is of sufficient breadth and depth, practical and fast enough, and responsive to the fast-evolving demands of the field.
 
 > **I believe in the transformative power of computational technology and intelligence to tackle complex society challenges and improve people's lives.**
@@ -29,10 +27,10 @@ I received a Ph.D. in Computer Science (with Greatest Distinction — “Summa c
 
 I have had the privilege of leading teams of talented individuals dedicated to addressing complex societal challenges. I founded or co-founded AirQo, Crane Cloud and Sunbird AI, among others. Our current initiatives span five key areas:
 
-- **AI for the Environment**  
-- **African AI Cloud/Compute Infrastructure**  
-- **AI for Finance**  
-- **AI for Healthcare**  
+- **AI for the Environment**
+- **African AI Cloud/Compute Infrastructure**
+- **AI for Finance**
+- **AI for Healthcare**
 - **Non-profit AI for Social Good**
 
 <span class="tag">Notable projects</span>

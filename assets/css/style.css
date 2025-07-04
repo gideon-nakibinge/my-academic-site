@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────
-   CSS – Gideon replica of ibaino.net (2025-07-04)
+   CSS – Gideon replica of ibaino.net (2025-07-04 update)
    ───────────────────────────────────────────────────────── */
 
 /* 1 Base tokens */
@@ -32,17 +32,15 @@ body{
 }
 .site-nav{
   display:flex;
-  justify-content:flex-start;      /* left-align links       */
+  justify-content:flex-start;
   align-items:center;
   width:100%;
   padding:.8rem 1.2rem;
 }
 .site-nav ul{
   list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  gap:2.2rem;
+  margin:0;padding:0;
+  display:flex;gap:2.2rem;
 }
 .site-nav a,
 .site-nav a:visited,
@@ -50,7 +48,7 @@ body{
 .site-nav a:focus{
   color:#fff;
   text-decoration:none;
-  font:600 1.05rem/1.2 inherit;    /* ≈16.8 px, semi-bold    */
+  font:600 1.05rem/1.2 inherit;
   letter-spacing:.02em;
 }
 .site-nav li.active a{
@@ -63,31 +61,28 @@ body{
 /* 4 Main grid */
 .site-content{
   display:grid;
-  grid-template-columns:1fr 260px; /* main | sidebar (fixed 260 px) */
+  grid-template-columns:1fr 260px;    /* main | sidebar */
   gap:2.5rem;
-  max-width:72rem;                /* 1152 px cap            */
+  max-width:72rem;                   /* 1152 px cap */
   margin:2rem auto 5rem;
   padding:0 .5rem;
 }
 @media(max-width:920px){.site-content{display:block;}}
 @media(min-width:921px){ .site-content{gap:3rem;} }
 
-/* 4a Sidebar: align & separate cards */
+/* 4a Sidebar alignment & spacing */
 @media(min-width:921px){
-  /* First card sits just below the <hr> that follows your name */
-  .site-content>.card:first-child{margin-top:4rem;}
-
-  /* Keep a gap between Welcome & Contact cards */
-  .site-content>.card + .card{margin-top:2rem;}
+  .site-content>.card:first-child{margin-top:3rem;}  /* align with audio */
+  .site-content>.card + .card   {margin-top:2rem;}  /* gap between cards */
 }
 
 /* explicit placement */
 .site-content>.main {grid-column:1;}
-.site-content>.card {grid-column:2;grid-row:auto;} /* auto height, no span */
+.site-content>.card {grid-column:2;grid-row:auto;}  /* auto height */
 
 /* 5 Main column rhythm */
 .main h1{
-  font-size:2.4rem;
+  font-size:2.15rem;                 /* smaller name */
   font-weight:700;
   margin:0 0 1.4rem;
 }

@@ -48,13 +48,25 @@ We are driving five thematic areas:
 </div>
 
 <aside class="card">
-  <header>Welcome</header>
+  <header>Contact me</header>
   <div class="card-body">
     <img src="{{ '/assets/images/gideon.jpg' | relative_url }}"
          alt="Portrait of Gideon"
-         style="width:100%;border-radius:4px">
+         class="portrait">
+
+    <p>
+      Department of Computer Science<br>
+      School of Computing & IT<br>
+      Makerere University – Kampala
+    </p>
+    <p>
+      <strong>E-mail:</strong> gideon AT mak.ac.ug<br>
+      <strong>Office:</strong> Block A 404<br>
+      <strong>Phone:</strong> +256 794 665 051
+    </p>
   </div>
 </aside>
+
 
 ## Quick links
 

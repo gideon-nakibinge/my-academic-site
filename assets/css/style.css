@@ -107,3 +107,36 @@ ul.quick-links li{margin:.3rem 0}
 
 /* little spacing before each tag */
 .main .tag{margin-top:2.2rem;display:inline-block}
+/* ───────── Fine-tune vertical rhythm ───────── */
+
+/* 1. Main column default paragraph spacing */
+.main p{
+  margin: .85rem 0;              /* ref site uses ≈14 px gap */
+}
+
+/* 2. Headings */
+.main h1{margin-bottom:1.75rem}  /* name → grey rule gap   */
+.main h2{margin:2.2rem 0 .8rem}  /* (if you use any <h2>)  */
+
+/* 3. Grey rule under H1 (---) */
+.main hr, .main > hr{
+  border:none;border-top:1px solid #e1e4e8;
+  margin: 1.75rem 0;
+}
+
+/* 4. Audio block & subsequent link */
+audio{margin-bottom:1rem}
+.main a[href$=".mp3"]{display:inline-block;margin:0 0 1.6rem}
+
+/* 5. Block-quote spacing */
+.main blockquote{margin:2.0rem 0}
+
+/* 6. Tag badge spacing (already had top-margin, add bottom) */
+.main .tag{margin-top:2.2rem;margin-bottom:.9rem}
+
+/* 7. Bullet lists inside main column */
+.main ul{margin:1.2rem 0;padding-left:1.4rem}
+.main ul li{margin:.4rem 0}
+
+/* 8. Quick-links list pushes a bit further down */
+ul.quick-links{margin-top:2rem}

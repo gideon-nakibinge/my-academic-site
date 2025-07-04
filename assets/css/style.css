@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────
-   assets/css/style.css ― Final ibaino.net–style stylesheet
+   Final consolidated CSS ― with explicit grid placement
    ───────────────────────────────────────────────────────── */
 
 /* 1. Base tokens */
@@ -15,40 +15,36 @@
 }
 
 /* 2. Global settings */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: #111;
   background: #fff;
-  font-size: 15.5px;    /* exact match */
+  font-size: 15.5px;
   font-weight: 400;
 }
 
-/* 3. Header & top nav */
+/* 3. Header & nav */
 .site-header {
   background: var(--dark);
   border-bottom: 1px solid rgba(255,255,255,.06);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: sticky; top: 0; z-index: 100;
 }
 .site-nav {
   display: flex;
-  justify-content: center;  /* centre the links */
+  justify-content: center;
   align-items: center;
   max-width: 100%;
   margin: 0;
-  padding: .8rem 1.2rem;     /* slim padding left/right */
+  padding: .8rem 1.2rem;
 }
 .site-nav ul {
-  list-style: none;         /* no bullets ever */
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 2.2rem;              /* spacing between links */
-  flex-wrap: nowrap;        /* never wrap */
+  gap: 2.2rem;
+  flex-wrap: nowrap;
 }
 .site-nav a {
   text-decoration: none;
@@ -60,7 +56,7 @@ body {
   border-bottom: 2px solid #fff;
 }
 
-/* 4. Main grid layout */
+/* 4. Main grid + explicit column placement */
 .site-content {
   display: grid;
   grid-template-columns: 1fr 260px;
@@ -69,39 +65,29 @@ body {
   margin: 2rem auto 5rem;
   padding: 0 1rem;
 }
-@media(max-width: 920px) {
-  .site-content { display: block; }
-}
+@media(max-width:920px) { .site-content { display:block; } }
 
-/* 5. Main column typography & rhythm */
+/* <- This forces the left block into col1 and the card into col2 -> */
+.site-content > .main { grid-column: 1; }
+.site-content > .card { grid-column: 2; grid-row: 1 / span 20; }
+
+/* 5. Main column type & rhythm */
 .main h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.4rem; font-weight: 700;
   margin: 0 0 1.4rem;
 }
 .main hr {
-  border: none;
-  border-top: 1px solid #e1e4e8;
+  border: none; border-top: 1px solid #e1e4e8;
   margin: 1.6rem 0;
 }
 .main h2 {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.35rem; font-weight: 700;
   margin: 2.1rem 0 .7rem;
 }
-.main p {
-  margin: .9rem 0;
-}
-.main ul {
-  margin: 1.2rem 0 1rem;
-  padding-left: 1.45rem;
-}
-.main li {
-  margin: .35rem 0;
-}
-.main strong {
-  font-weight: 700;
-}
+.main p { margin: .9rem 0; }
+.main ul { margin: 1.2rem 0 1rem; padding-left: 1.45rem; }
+.main li { margin: .35rem 0; }
+.main strong { font-weight: 700; }
 .main blockquote {
   border-left: 4px solid #ccc;
   margin: 1.8rem 0;
@@ -111,11 +97,9 @@ body {
   line-height: 1.45;
   background: var(--card-bg);
 }
-audio {
-  margin-bottom: .9rem;
-}
+audio { margin-bottom: .9rem; }
 
-/* 6. Pink “tag” badges */
+/* 6. Pink tag badges */
 .tag {
   display: inline-block;
   margin: 2.05rem 0 .85rem;
@@ -129,19 +113,16 @@ audio {
     SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
 }
 
-/* 7. Quick‐links list */
+/* 7. Quick‐links */
 ul.quick-links {
   list-style: none;
   margin: 2rem 0 0;
   padding: 0;
 }
-ul.quick-links li {
-  margin: .3rem 0;
-}
+ul.quick-links li { margin: .3rem 0; }
 
-/* 8. Sidebar “Contact me” card */
+/* 8. Sidebar card */
 .card {
-  grid-row: 1 / span 20;     /* flush with top of main column */
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--card-bg);
@@ -152,32 +133,23 @@ ul.quick-links li {
   padding: .6rem 1rem;
   font-weight: 700;
 }
-.card .card-body {
-  padding: 1rem;
-}
-.card img,
-.portrait {
+.card .card-body { padding: 1rem; }
+.card img, .portrait {
   width: 100%;
-  max-height: 255px;         /* matches reference height */
+  max-height: 255px;   /* locks card height like reference */
   object-fit: cover;
 }
 
-/* 9. Floating action buttons */
+/* 9. FABs */
 .fab-stack {
-  position: fixed;
-  right: 1rem;
-  top: 50%;
+  position: fixed; right: 1rem; top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: .9rem;
+  display: flex; flex-direction: column; gap: .9rem;
   z-index: 200;
 }
 .fab-stack a {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
+  display: grid; place-items: center;
+  width: 48px; height: 48px;
   border-radius: 50%;
   background: #fff;
   border: 1px solid #d0d0d0;
@@ -185,34 +157,20 @@ ul.quick-links li {
   font-size: 1.35rem;
   text-decoration: none;
 }
-.fab-stack a:hover {
-  background: #f5f5f5;
-}
+.fab-stack a:hover { background: #f5f5f5; }
 
-/* 10. Fixed bottom nav */
+/* 10. Bottom nav */
 .page-footer-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #f6f7f8;
-  border-top: 1px solid var(--border);
-  font-size: .9rem;
-  text-align: center;
-  padding: .35rem 0;
+  position: fixed; bottom: 0; left: 0; width: 100%;
+  background: #f6f7f8; border-top: 1px solid var(--border);
+  font-size: .9rem; text-align: center; padding: .35rem 0;
 }
 .page-footer-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  padding: 0 .25rem;
+  color: var(--accent); text-decoration: none; padding: 0 .25rem;
 }
 .page-footer-nav a:not(:last-child)::after {
-  content: "|";
-  margin-left: .25rem;
-  color: #999;
+  content: "|"; margin-left: .25rem; color: #999;
 }
 
-/* Hide the legacy footer */
-.site-footer {
-  display: none;
-}
+/* Hide legacy footer */
+.site-footer { display: none; }

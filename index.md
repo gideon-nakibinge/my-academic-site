@@ -53,7 +53,6 @@ We are driving five thematic areas:
     <img src="{{ '/assets/images/gideon.jpg' | relative_url }}"
          alt="Portrait of Gideon"
          class="portrait">
-
     <p>
       Department of Computer Science<br>
       School of Computing & IT<br>

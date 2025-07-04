@@ -1,202 +1,77 @@
-/* ─────────────────────────────────────────────────────────
-   STYLE SHEET – Gideon Nakibinge site (compact version)
-   Mirrors ibaino.net layout, but with smaller fonts and
-   tighter vertical rhythm.  Updated 2025-07-04.
-   ───────────────────────────────────────────────────────── */
+---
+title: Home
+permalink: /
+---
 
-/* 1 Base tokens */
-:root{
-  font-family:
-    -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
-    "Helvetica Neue",Arial,"Noto Sans",sans-serif;
-  line-height:1.45;                       /* tighter default */
-  --accent:#0366d6;
-  --dark:#2f353b;
-  --card-bg:#fafafa;
-  --border:#e5e5e5;
-}
+<div class="main" markdown="1">
 
-/* 2 Global text size & colour */
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  color:#111;
-  background:#fff;
-  font:400 14.2px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,
-       "Helvetica Neue",Arial,"Noto Sans",sans-serif;
-}
+# Engineer Gideon Nakibinge
 
-/* 3 Header & top nav (left-aligned) */
-.site-header{
-  background:var(--dark);
-  border-bottom:1px solid rgba(255,255,255,.06);
-  position:sticky;top:0;z-index:100;
-}
-.site-nav{
-  display:flex;
-  justify-content:flex-start;
-  align-items:center;
-  width:100%;
-  padding:.8rem 1.2rem;
-}
-.site-nav ul{
-  list-style:none;
-  margin:0;padding:0;
-  display:flex;gap:2rem;
-}
-.site-nav a,
-.site-nav a:visited,
-.site-nav a:hover,
-.site-nav a:focus{
-  color:#fff;
-  text-decoration:none;
-  font:600 0.95rem/1.2 inherit;           /* scaled with body size */
-  letter-spacing:.02em;
-}
-.site-nav li.active a{
-  border-bottom:2px solid #fff;
-}
-.site-nav a:hover,
-.site-nav a:focus{opacity:.85;}
+---
 
-/* 4 Main grid */
-.site-content{
-  display:grid;
-  grid-template-columns:1fr 260px;        /* main | sidebar */
-  gap:2rem;                               /* slightly tighter */
-  max-width:72rem;                        /* 1152 px cap */
-  margin:2rem auto 5rem;
-  padding:0 .5rem;
-}
-@media(max-width:920px){.site-content{display:block;}}
-@media(min-width:921px){ .site-content{gap:2.5rem;} }
+## Listen to the site! {#audio}
 
-/* Sidebar placement & spacing */
-@media(min-width:921px){
-  .site-content>.card:first-child{margin-top:4.6rem;}  /* align with h-rule */
-  .site-content>.card + .card   {margin-top:1.6rem;}
-}
-.site-content>.main {grid-column:1;}
-.site-content>.card {grid-column:2;grid-row:auto;}
+{% include audio-player.html %}
 
-/* 5 Main column rhythm */
-.main h1{
-  font-size:1.8rem;                      /* was 2rem */
-  font-weight:700;
-  margin:0 0 1.2rem;
-}
-.main hr{
-  border:none;border-top:1px solid #e1e4e8;
-  margin:1.3rem 0;
-}
-.main h2{
-  font-size:1.2rem;                      /* was 1.35rem */
-  font-weight:700;
-  margin:1.6rem 0 .6rem;
-}
-.main p,
-.main ul{margin:.6rem 0;}                /* tighter vertical gaps */
-.main li{margin:.25rem 0;}
-.main strong{font-weight:700;}
+[Download the podcast]({{ '/assets/audio/site-intro.mp3' | relative_url }})
 
-/* 5a Blockquote */
-.main blockquote{
-  border-left:4px solid #ccc;
-  margin:1.2rem 0;
-  padding:.4rem 1rem;
-  font-size:1.05rem;
-  font-weight:600;
-  line-height:1.4;
-  background:var(--card-bg);
-}
-audio{margin-bottom:.7rem;}
+I am a **Data Scientist** and MSc researcher focused on trustworthy, privacy-preserving analytics for social impact.  
+My work explores how *deep-learning systems* and *statistical modelling* can inform better decisions in health, climate, and finance.
 
-/* 6 Tag badge */
-.tag{
-  display:inline-block;
-  margin:1.4rem 0 .6rem;
-  background:#ffeef0;
-  border:1px solid #d73a49;
-  color:#cb2431;
-  border-radius:4px;
-  padding:.1rem .35rem;
-  font:.78rem SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
-}
+> **I believe computational intelligence, guided by ethics, can transform society for the better.**
 
-/* 7 Quick-links list */
-ul.quick-links{
-  list-style:none;
-  margin:1.6rem 0 0;
-  padding:0;
-}
-ul.quick-links li{margin:.25rem 0;}
+Currently I lead projects on **climate-risk dashboards**, **fraud detection with differential privacy**, and **AI-assisted learning tools** for low-connectivity schools.
 
-/* 8 Sidebar card */
-.card{
-  border:1px solid var(--border);
-  border-radius:8px;
-  background:var(--card-bg);
-  font-size:.85rem;
-}
-.card header{
-  background:#f4f4f4;
-  padding:.55rem .9rem;
-  font-weight:700;
-}
-.card .card-body{padding:.85rem;}
-.card img,
-.portrait{
-  width:100%;
-  max-height:240px;
-  object-fit:cover;
-}
+<span class="tag">Flagship initiatives and projects</span>
 
-/* 9 Floating-action buttons */
-.fab-stack{
-  position:fixed;right:1rem;top:50%;
-  transform:translateY(-50%);
-  display:flex;flex-direction:column;gap:.75rem;
-  z-index:200;
-}
-.fab-stack a{
-  display:grid;place-items:center;
-  width:44px;height:44px;
-  border-radius:50%;
-  background:#fff;
-  border:1px solid #d0d0d0;
-  box-shadow:0 1px 3px rgba(0,0,0,.12);
-  font-size:1.25rem;
-  text-decoration:none;
-}
-.fab-stack a:hover{background:#f5f5f5;}
+We are driving five thematic areas:
 
-/* 10 Bottom nav */
-.page-footer-nav{
-  position:fixed;bottom:0;left:0;width:100%;
-  background:#f6f7f8;
-  border-top:1px solid var(--border);
-  font-size:.8rem;
-  text-align:left;
-  padding:.3rem .9rem;
-}
-.page-footer-nav a{
-  color:var(--accent);
-  text-decoration:none;
-  padding:0 .2rem;
-}
-.page-footer-nav a:not(:last-child)::after{
-  content:"|";
-  margin-left:.2rem;
-  color:#999;
-}
+- **AI for the Environment**  
+- **African AI Cloud/Compute Infrastructure**  
+- **AI for Finance**  
+- **AI for Healthcare**  
+- **Non-profit AI for Social Good**
 
-/* 11 Inline links (download audio / podcast) */
-.main a{
-  color:var(--accent);
-  text-decoration:none;
-}
-.main a:hover,
-.main a:focus{text-decoration:underline;}
+<span class="tag">Notable projects</span>
 
-/* Hide legacy footer */
-.site-footer{display:none;}
+**AirQo, Africa:** At **AirQo**, we pioneer AI-driven technology to provide hyper-local, real-time air-quality data, empowering 60 million citizens in 15+ African cities.  
+**Crane Cloud:** We develop a multi-cloud compute solution tailored to bandwidth-limited environments, enabling seamless AI workloads across public and private clouds.  
+**Sunbird AI:** *Sunbird AI* harnesses AI for social good in Africa, addressing key developmental and societal challenges.  
+**HASH:** We improve maternal, sexual, and reproductive health outcomes through responsible AI in healthcare systems.
+
+<span class="tag">Past research projects</span>
+
+**iScheme and Flute programming languages.** Earlier in my career I created high-level languages that let programmers build adaptive mobile software without worrying about low-level concerns.  
+**BRIGHT:** Trained 10 PhD and 5 postdocs between Makerere University and Chalmers/Gothenburg, advancing CS expertise in Uganda.  
+**COAST:** Delivered AI systems for pandemic response strategy and surveillance in East Africa during COVID-19.
+
+</div>
+
+<aside class="card">
+  <header>Contact me</header>
+  <div class="card-body">
+    <img src="{{ '/assets/images/gideon.jpg' | relative_url }}"
+         alt="Portrait of Gideon"
+         class="portrait">
+    <p>
+      Department of Computer Science<br>
+      School of Computing & IT<br>
+      Makerere University – Kampala
+    </p>
+    <p>
+      <strong>E-mail:</strong> gideon AT mak.ac.ug<br>
+      <strong>Office:</strong> Block A 404<br>
+      <strong>Phone:</strong> +256 794 665 051
+    </p>
+  </div>
+</aside>
+
+## Quick links
+
+<ul class="quick-links">
+  <li>🔬 <strong>Research</strong> – thematic areas & projects</li>
+  <li>📚 <strong>Publications</strong> – peer-reviewed papers</li>
+  <li>🎤 <strong>Talks</strong> – keynotes & recordings</li>
+  <li>👩‍🏫 <strong>Teaching</strong> – courses & resources</li>
+  <li>📝 <strong>Blog</strong> – informal reflections</li>
+</ul>

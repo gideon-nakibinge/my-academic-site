@@ -13,14 +13,14 @@ Gideon Nakibinge is an MSc candidate in Computer Science at Makerere University,
 
 <span class="tag">Present Positions</span>
 
-- **Data Analyst**, Save The Children International under the Saving Women and Premature Babies. 
+- **Data Analyst**, Save The Children International under the Saving Women and Premature Babies project (SWAP- 2022 - present). 
 
 <span class="tag">Education</span>
 
-- **Msc in Computer Science** (2023–2027) – Makerere University  
+- **Msc in Computer Science** (2023–2027) – Makerere University, Uganda.  
   *Major: Data Science and AI*  
-- **B.Sc. in Statistics** (2017–2020) – Makerere University, Uganda  
-  *Grade: CGPA 3,9/5.0 (Second Class Upper)*  
+- **B.Sc. in Statistics** (2017–2020) – Makerere University, Uganda.  
+  *Grade: CGPA 3.9/5.0 (Second Class Upper)*  
   *Major: Statistical Computing*  
 
 <span class="tag">Working Experience (Academia & Industry)</span>

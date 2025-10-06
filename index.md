@@ -24,7 +24,7 @@ Before beginning my MSc, I earned a Bachelor’s degree in Statistics (Statistic
 
 <span class="tag">Associations</span>
 
-I am an active member of several professional associations and research communities, including
+I am an active member of several professional associations and research communities, including;
 
 - **Uganda Statistical Society**
 - **African Data Science Association**
@@ -47,7 +47,7 @@ I am an active member of several professional associations and research communit
     </p>
     <p>
       <strong>E-mail:</strong> nakibinge.gideon@gmail.com<br>
-      # <strong>Office:</strong> Block B&nbsp;312<br>
+      # <strong>Location:</strong> Kampala,&nbsp;Uganda<br>
       <strong>Phone:</strong> +256&nbsp;777&nbsp;091&nbsp;052
     </p>
   </div>

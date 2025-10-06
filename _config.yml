@@ -7,7 +7,7 @@ title: "Gideon Nakibinge’s site"
 
 # If you publish from the “my-academic-site” repo under
 # https://<username>.github.io/my-academic-site
-baseurl: "/gideon-nakibinge.github.io"
+baseurl: ""
 # If you publish at https://<username>.github.io/ (root),
 # change to: baseurl: ""
 

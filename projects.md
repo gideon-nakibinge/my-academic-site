@@ -1,6 +1,6 @@
 ---
-title: Research
-permalink: /research/
+title: Projects
+permalink: /projects/
 ---
 
 <div class="main" markdown="1">

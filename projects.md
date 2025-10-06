@@ -5,7 +5,7 @@ permalink: /projects/
 
 <div class="main">
 
-# Projects
+# **Projects**
 
 <p class="intro">
 Here are some of the projects I am currently working on or have recently completed.  

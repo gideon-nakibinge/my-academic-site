@@ -13,15 +13,14 @@ permalink: /
 
 {% include audio-player.html %}
 
-I am a Professor of Computer Science and the Chair of the Department of Computer Science at Makerere University. My research is focused on leveraging Computer Science to develop novel solutions to global challenges. I am also passionate about advancing high-quality Computer Science education — that is of sufficient breadth and depth, practical and fast enough, and responsive to the fast-evolving demands of the field.
+I am an MSc candidate in Computer Science at Makerere University, specialising in Data Science and Artificial Intelligence. My research focuses on privacy-preserving machine learning, with a particular emphasis on secure fraud detection in mobile money systems through the use of homomorphic encryption and advanced machine learning models. I am also interested in the applications of AI in health and climate.
+
 
 > **I believe in the transformative power of computational technology and intelligence to tackle complex society challenges and improve people's lives.**
 
-Currently, I lead several research initiatives aimed at creating and applying computational methods and tools that can significantly improve the quality of life, particularly in the context of developing countries. Through these efforts, I strive to bridge the gap between cutting-edge research and real-world impact, ensuring that technological advancements contribute meaningfully and responsibly to addressing societal needs.
+Alongside my academic work, I am a Data Analyst at Save the Children International, where I design and review quantitative and qualitative assessment tools, oversee data collection and analysis, and contribute to monitoring, evaluation, and research activities that support evidence-based decision-making.
 
-Previously I investigated and developed programming languages and software tools to help programmers easily write highly adaptive and distributed mobile software without worrying about low-level concerns. My research in this area helped create iScheme and Flute programming languages. In 2008, I pioneered iScheme as an alternative programming language to develop mobile applications for the iPhone after it was launched in 2007.
-
-I received a Ph.D. in Computer Science (with Greatest Distinction — “Summa cum laude”) and an MSc. (with Great Distinction) in Computer Science from Vrije Universiteit Brussel, Belgium in 2008 and 2012, respectively. I received a B.Sc. (First Class Honors) in Computer Science from Makerere University in 2006, where I also received the Best Science and Overall Best Graduate award for that year. Prior to returning to Makerere University I worked as a pre-doctoral and post-doctoral researcher at the Software Languages Lab, Vrije Universiteit Brussel, Belgium. Before that I worked in the software-development industry and IT management in Uganda.
+Before beginning my MSc, I earned a Bachelor’s degree in Statistics (Statistical Computing major) from Makerere University and worked as a Data Analyst at Bronkar (U) Limited. My CV contains further detail.
 
 <span class="tag">Flagship initiatives and projects</span>
 

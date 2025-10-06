@@ -39,11 +39,11 @@
     {% endfor %}
   </nav>
 
-  <!-- ───── Floating action buttons ───── -->
+  <!-- ───── Floating action buttons (FABs) ───── -->
   <div class="fab-stack">
-    <a href="{{ '/' | relative_url }}" aria-label="Home">🏠</a>
-    <a href="#audio"               aria-label="Podcast">🎙️</a>
-    <a href="{{ '/faq/' | relative_url }}" aria-label="FAQ">❓</a>
+    {% for item in site.nav_items %}
+      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+    {% endfor %}
   </div>
 
 </body>

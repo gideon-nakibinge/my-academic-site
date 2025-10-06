@@ -17,8 +17,8 @@ markdown: kramdown           # default Markdown engine
 nav_items:
   - name: Home
     url: /
-  - name: Research
-    url: /research/
+  - name: Projects
+    url: /projects/
   - name: Publications
     url: /publications/
   - name: Talks

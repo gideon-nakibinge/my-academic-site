@@ -27,7 +27,7 @@
     </nav>
   </header>
 
-  <!-- ───── Main grid (content + sidebar) ───── -->
+  <!-- ───── Main grid (content area) ───── -->
   <main class="site-content">
     {{ content }}
   </main>
@@ -38,13 +38,6 @@
       <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
     {% endfor %}
   </nav>
-
-  <!-- ───── Floating action buttons (FABs) ───── -->
-  <div class="fab-stack">
-    {% for item in site.nav_items %}
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-    {% endfor %}
-  </div>
 
 </body>
 </html>

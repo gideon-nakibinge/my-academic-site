@@ -47,7 +47,7 @@ I am an active member of several professional associations and research communit
     </p>
     <p>
       <strong>E-mail:</strong> nakibinge.gideon@gmail.com<br>
-      # <strong>Location:</strong> Kampala,&nbsp;Uganda<br>
+      <strong>Location:</strong> Kampala,&nbsp;Uganda<br>
       <strong>Phone:</strong> +256&nbsp;777&nbsp;091&nbsp;052
     </p>
   </div>

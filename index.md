@@ -22,28 +22,27 @@ Alongside my academic work, I am a Data Analyst at Save the Children Internation
 
 Before beginning my MSc, I earned a Bachelor’s degree in Statistics (Statistical Computing major) from Makerere University and worked as a Data Analyst at Bronkar (U) Limited. My CV contains further detail.
 
-<span class="tag">Flagship initiatives and projects</span>
+<span class="tag">Associations</span>
 
-I have had the privilege of leading teams of talented individuals dedicated to addressing complex societal challenges. I founded or co-founded AirQo, Crane Cloud and Sunbird AI, among others. Our current initiatives span five key areas:
+I am an active member of several professional associations and research communities, including
 
-- **AI for the Environment**
-- **African AI Cloud/Compute Infrastructure**
-- **AI for Finance**
-- **AI for Healthcare**
-- **Non-profit AI for Social Good**
+- **Uganda Statistical Society**
+- **African Data Science Association**
+- **AI For Finance Research Group at Makerere University**
+- **Python Uganda**
 
-<span class="tag">Notable projects</span>
+# <span class="tag">Notable projects</span>
 
-**AirQo.Africa:** At AirQo we pioneered AI-driven technology to provide communities and cities across Africa with accurate, hyper-local, real-time air-quality data, empowering them to mitigate air pollution. AirQo now operates in more than 15 African cities and provides information covering over 60 million people, thanks to partnerships with Google and others.  
-**Crane Cloud:** We are developing a multi-cloud compute solution that supports seamless AI computation, enabling app and service portability between private and public clouds. The platform is tailored for African challenges such as limited bandwidth, intermittent connectivity and power outages.  
-**Sunbird AI:** Sunbird AI develops non-profit AI technologies for social good in Africa, targeting key developmental and societal challenges.  
-**HASH:** HASH focuses on using AI to improve maternal, sexual and reproductive-health outcomes, emphasising responsible AI in healthcare systems.
+ # **AirQo.Africa:** At AirQo we pioneered AI-driven technology to provide communities and cities across Africa with accurate, hyper-local, real-time air-quality data, empowering them to mitigate air pollution. AirQo now operates in more than 15 African cities and provides information covering over 60 million people, thanks to partnerships with Google and others.  
+# **Crane Cloud:** We are developing a multi-cloud compute solution that supports seamless AI computation, enabling app and service portability between private and public clouds. The platform is tailored for African challenges such as limited bandwidth, intermittent connectivity and power outages.  
+# **Sunbird AI:** Sunbird AI develops non-profit AI technologies for social good in Africa, targeting key developmental and societal challenges.  
+# **HASH:** HASH focuses on using AI to improve maternal, sexual and reproductive-health outcomes, emphasising responsible AI in healthcare systems.
 
-<span class="tag">Past research projects</span>
+# <span class="tag">Past research projects</span>
 
-**iScheme and Flute programming languages.** Early in my career I created iScheme and Flute to let programmers build adaptive mobile software without worrying about low-level concerns. In 2008 I used iScheme to develop iPhone apps shortly after the phone’s 2007 launch.  
-**BRIGHT:** Through the BRIGHT project we trained 10 PhD and 5 post-doctoral researchers between Makerere University, Chalmers University of Technology and the University of Gothenburg, advancing computer-science expertise in Uganda.  
-**COAST:** The COAST project delivered AI and data systems for targeted surveillance and management of COVID-19, improving pandemic-response strategies in Uganda and helping prepare for future health crises.
+# **iScheme and Flute programming languages.** Early in my career I created iScheme and Flute to let programmers build adaptive mobile software without worrying about low-level concerns. In 2008 I used iScheme to develop iPhone apps shortly after the phone’s 2007 launch.  
+# **BRIGHT:** Through the BRIGHT project we trained 10 PhD and 5 post-doctoral researchers between Makerere University, Chalmers University of Technology and the University of Gothenburg, advancing computer-science expertise in Uganda.  
+# **COAST:** The COAST project delivered AI and data systems for targeted surveillance and management of COVID-19, improving pandemic-response strategies in Uganda and helping prepare for future health crises.
 
 </div>
 
@@ -60,14 +59,14 @@ I have had the privilege of leading teams of talented individuals dedicated to a
       Makerere University – Kampala
     </p>
     <p>
-      <strong>E-mail:</strong> baino AT mak.ac.ug<br>
-      <strong>Office:</strong> Block B&nbsp;312<br>
-      <strong>Phone:</strong> +256&nbsp;794&nbsp;665&nbsp;051
+      <strong>E-mail:</strong> nakibinge.gideon@gmail.com<br>
+      # <strong>Office:</strong> Block B&nbsp;312<br>
+      <strong>Phone:</strong> +256&nbsp;777&nbsp;091&nbsp;052
     </p>
   </div>
 </aside>
 
-## Quick links
+# ## Quick links
 
 <ul class="quick-links">
   <li>🔬 <strong>Research</strong> – thematic areas & projects</li>
